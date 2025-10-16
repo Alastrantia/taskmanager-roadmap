@@ -1,4 +1,14 @@
-# Logs
+# Python stuff
+.venv
+venv
+.python-version
+pyproject.toml
+uv.lock
+.env
+pycache
+
+
+# Stuff from the gitignore template
 logs
 *.log
 npm-debug.log*

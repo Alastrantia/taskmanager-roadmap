@@ -8,6 +8,7 @@ def mark_in_progress(tasks, id):
         return tasks
     tasks[index].status = "in-progress"
     tasks[index].updatedAt = current_time
+    print(f"Marked task with ID: {id} as in-progress")
     return tasks
 
 def callback(x, target_id):

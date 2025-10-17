@@ -8,6 +8,7 @@ def mark_done(tasks, id):
         return tasks
     tasks[index].status = "done"
     tasks[index].updatedAt = current_time
+    print(f"Marked task with ID: {id} as done")
     return tasks
 
 def callback(x, target_id):

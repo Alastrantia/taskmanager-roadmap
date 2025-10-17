@@ -22,11 +22,15 @@ def save_json(tasks, path="tasks.json"):
 
 def load_json(path="tasks.json"):
     new_data = []
-    with open(path, "r") as f:
-       contents = f.read()
-       if contents == "":
-           return []
-       json_data = json.loads(contents)
+    try:
+        with open(path, "r") as f:
+            contents = f.read()
+        if contents == "":
+            return []
+        json_data = json.loads(contents)
+    except FileNotFoundError:
+        open(path, "x")
+
     for item in json_data:
        new_data.append(task.Task(item["description"], item["status"], item["createdAt"], item["updatedAt"], id=item["id"]))
     return new_data

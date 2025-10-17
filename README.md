@@ -1,8 +1,9 @@
 # taskmanager-roadmap
-the taskmanager project on roadmap.sh
+the taskmanager project on roadmap.sh  
+project url: https://roadmap.sh/projects/task-tracker
 
 ## usage
-yeah, these are the available commands. i know it might not be very nice to have the ids be long uuids but it works.
+yeah, these are the available commands. i know it might not be very nice to have the ids be super-long uuids but it works.
 ```
 # Adding a new task
 task-cli add "Buy groceries"

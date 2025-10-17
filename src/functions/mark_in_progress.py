@@ -1,9 +1,13 @@
+from datetime import datetime
+
 def mark_in_progress(tasks, id):
+    current_time = str(datetime.now())
     index = next((i for i, x in enumerate(tasks) if callback(x, id)), None)
     if index == None:
         print(f"Could not find task with ID {id}")
         return tasks
     tasks[index].status = "in-progress"
+    tasks[index].updatedAt = current_time
     return tasks
 
 def callback(x, target_id):

@@ -1,14 +1,8 @@
 def list_tasks(tasks, filter="none"):
+    filtered_tasks = [item for item in tasks if item.status == filter]
     if filter == "none":
-        return tasks
-    if filter == "done":
-        done_tasks = [item for item in tasks if item.status == 'done']
-        return done_tasks
-    if filter == "todo":
-        todo_tasks = [item for item in tasks if item.status == 'todo']
-        return todo_tasks
-    if filter == "in-progress":
-        progress_tasks = [item for item in tasks if item.status == 'in-progress']
-        return progress_tasks
-    else:
-        return "Invalid filter"
+        filtered_tasks = tasks
+        
+    for task in filtered_tasks:
+        print(f"{task.description}: {task.status}")
+    return tasks
